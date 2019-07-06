@@ -6,6 +6,7 @@ import FormInput from "./form-input/form-input.component";
 import Header from "./header/header.component";
 import MenuItem from "./menu-item/menu-item.component";
 import SignIn from "./signin/sign-in.component";
+import SignUp from "./sign-up/sign-up.component";
 export {
 	CollectionItem,
 	CustomButton,
@@ -14,5 +15,6 @@ export {
 	FormInput,
 	Header,
 	MenuItem,
-	SignIn
+	SignIn,
+	SignUp
 };

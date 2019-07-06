@@ -3,7 +3,7 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import { Header } from "./components/componentIndex";
 import { HomePage, ShopPage, SignInAndSignUpPages } from "./pages/pagesIndex";
-import { auth } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 class App extends React.Component {
 	constructor() {
 		super();
@@ -16,9 +16,27 @@ class App extends React.Component {
 	unsubcribeFromAuth = null;
 
 	componentDidMount() {
-		this.unsubcribeFromAuth = auth.onAuthStateChanged((user) => {
-			this.setState({ currentUser: user });
-			console.log(user);
+		this.unsubcribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+			if (userAuth) {
+				console.log("User Auth:", userAuth);
+				const userRef = await createUserProfileDocument(userAuth);
+				userRef.onSnapshot((snapShot) => {
+					console.log("A");
+					this.setState(
+						{
+							currentUser: {
+								id: snapShot.id,
+								...snapShot.data()
+							}
+						},
+						() => {
+							console.log(this.state);
+						}
+					);
+				});
+			} else {
+				this.setState({ currentUser: userAuth });
+			}
 		});
 	}
 
