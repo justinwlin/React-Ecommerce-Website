@@ -9,6 +9,7 @@ import SignIn from "./signin/sign-in.component";
 import SignUp from "./sign-up/sign-up.component";
 import CartIcon from "./cart-icon/cart-icon.component";
 import CartDropDown from "./cart-dropdown/cart-dropdown.component";
+import CartItem from "./cart-item/cart-item.component";
 export {
 	CollectionItem,
 	CustomButton,
@@ -20,5 +21,6 @@ export {
 	SignIn,
 	SignUp,
 	CartIcon,
-	CartDropDown
+	CartDropDown,
+	CartItem
 };
