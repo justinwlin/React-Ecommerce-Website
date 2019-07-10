@@ -7,6 +7,8 @@ import Header from "./header/header.component";
 import MenuItem from "./menu-item/menu-item.component";
 import SignIn from "./signin/sign-in.component";
 import SignUp from "./sign-up/sign-up.component";
+import CartIcon from "./cart-icon/cart-icon.component";
+import CartDropDown from "./cart-dropdown/cart-dropdown.component";
 export {
 	CollectionItem,
 	CustomButton,
@@ -16,5 +18,7 @@ export {
 	Header,
 	MenuItem,
 	SignIn,
-	SignUp
+	SignUp,
+	CartIcon,
+	CartDropDown
 };
