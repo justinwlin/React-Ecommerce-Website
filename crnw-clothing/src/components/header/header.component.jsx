@@ -34,6 +34,4 @@ const mapStateToProps = (state) => ({
 	currentUser: state.user.currentUser
 });
 
-const mapDispatchToAction = (action) => ({});
-
 export default connect(mapStateToProps)(Header);
