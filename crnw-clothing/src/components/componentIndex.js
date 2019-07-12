@@ -10,6 +10,8 @@ import SignUp from "./sign-up/sign-up.component";
 import CartIcon from "./cart-icon/cart-icon.component";
 import CartDropDown from "./cart-dropdown/cart-dropdown.component";
 import CartItem from "./cart-item/cart-item.component";
+import Checkout from "./checkout/checkout.component";
+import CheckoutItem from "./checkout-item/checkout-item.component";
 export {
 	CollectionItem,
 	CustomButton,
@@ -22,5 +24,7 @@ export {
 	SignUp,
 	CartIcon,
 	CartDropDown,
-	CartItem
+	CartItem,
+	Checkout,
+	CheckoutItem
 };

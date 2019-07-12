@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+
 import "./cart-item.styles.scss";
 
 const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
@@ -16,8 +16,4 @@ const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
 	);
 };
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-	cartItems
-});
-
-export default connect(mapStateToProps)(CartItem);
+export default CartItem;
