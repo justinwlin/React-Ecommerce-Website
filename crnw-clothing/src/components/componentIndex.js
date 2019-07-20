@@ -12,6 +12,8 @@ import CartDropDown from "./cart-dropdown/cart-dropdown.component";
 import CartItem from "./cart-item/cart-item.component";
 import Checkout from "./checkout/checkout.component";
 import CheckoutItem from "./checkout-item/checkout-item.component";
+import CollectionsOverview from "./collection-overview/collection-overview.component";
+import StripeButton from "./stripe-button/stripe-button.component";
 export {
 	CollectionItem,
 	CustomButton,
@@ -26,5 +28,7 @@ export {
 	CartDropDown,
 	CartItem,
 	Checkout,
-	CheckoutItem
+	CheckoutItem,
+	CollectionsOverview,
+	StripeButton
 };

@@ -6,7 +6,7 @@ import {
 	selectCartItems,
 	selectCartTotal
 } from "../../redux/cart/cart.selectors";
-import { CheckoutItem } from "../componentIndex";
+import { CheckoutItem, StripeButton } from "../componentIndex";
 
 const Checkout = ({ cartItems, total }) => {
 	return (
@@ -29,10 +29,16 @@ const Checkout = ({ cartItems, total }) => {
 				</div>
 			</div>
 			{cartItems.map((cartItem) => (
-				<CheckoutItem cartItem={cartItem} />
+				<CheckoutItem key={cartItem.id} cartItem={cartItem} />
 			))}
 			<div className="total">
 				<span> Total: ${total}</span>
+			</div>
+			<StripeButton price={total} />
+			<div className="test-warning">
+				Please use the test credentials below!
+				<br />
+				4242 4242 4242 4242 - Exp - 01/20 - CVV: 123
 			</div>
 		</div>
 	);
