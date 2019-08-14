@@ -1,15 +1,11 @@
-class Solution(object):
-    def findDuplicates(self, nums):
-        outputs = []
-        for n in nums:
-            value = abs(n) - 1
-            print("Value: ", value)
-            if nums[value] < 0:
-                print("Nums Value: " + str(nums[value]))
-                outputs.append(abs(n))
-            else:
-                nums[value] = nums[value] * -1
-        return outputs
+def solution(arr):
+    maxCurrently = arr[0]
+    maxSoFar = arr[0]
+
+    for num in arr[1:]:
+        maxCurrently = max(num, maxCurrently + num)
+        maxSoFar = max(maxSoFar, maxCurrently)
+    return maxSoFar
 
 
-print(Solution().findDuplicates([4, 3, 2, 7, 8, 2, 3, 1]))
+print(solution([4, -1, 2, 1]))
